@@ -1,5 +1,5 @@
 ## Setting server gitlab
-### 1. Pertama kali harus menyiapkan user `git` dan `.ssh` directory
+##### 1. Pertama kali harus menyiapkan user `git` dan `.ssh` directory
 ```
 $ sudo adduser git
 $ su git
