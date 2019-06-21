@@ -60,13 +60,16 @@ $ which git-shell   # make sure git-shell is installed on your system.
 $ sudo -e /etc/shells  # and add the path to git-shell from last command
 $ chsh git -s $(which git-shell) 
 ```
-untuk mengembalikan shell ke bash terminal semula `chsh git -s /bin/bash `
 apabila berhasil maka akan muncul seperti ini
 ```
 $ ssh git@gitserver
 fatal: Interactive git shell is not enabled.
 hint: ~/git-shell-commands should exist and have read and execute access.
 Connection to gitserver closed.
+```
+untuk mengembalikan shell ke bash terminal semula
+```
+$ chsh git -s /bin/bash
 ```
 
 ## Setting Client
