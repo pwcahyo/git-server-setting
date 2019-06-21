@@ -35,16 +35,16 @@ Initialized empty Git repository in /project.git/
 ```
 
 
-#### 4. Melalukan setting hooks untuk mengarahkan kode yang sudah dilakukan `(pull,commit,push)` agar masuk kedalam direktori lain `excalibur adalah direktori home user lain`
+#### 4. Melalukan setting hooks untuk mengarahkan kode yang sudah dilakukan `(pull,commit,push)` agar masuk kedalam direktori lain `/home/git/repo/project/ adalah direktori repo original`
 - contoh letak lokasi direktori `/home/git/repo/project/` ubah kepemilikan direktori sesuai user `git`
 ```
-chown -R git:git /home/excalibur/repo/project/
+chown -R git:git /home/git/repo/project/
 ```
 - ciptakan file `post-receive` didalam folder hooks, kemudian isikan kode bash untuk destinasi work-tree
 ```
 #!/bin/bash
-GIT_WORK_TREE=/home/excalibur/repo/project/ git checkout -f master
-chmod -R 775 /home/excalibur/repo/project/
+GIT_WORK_TREE=/home/git/repo/project/ git checkout -f master
+chmod -R 775 /home/git/repo/project/
 ```
 * note : chmod untuk mengubah permission file didalam folder agar bisa executable
 
