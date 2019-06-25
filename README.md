@@ -1,5 +1,5 @@
 ## Setting server gitlab
-#### 1. Pertama kali harus menyiapkan `git` user dan `.ssh` directory
+#### 1. Pertama kali harus menyiapkan `git` user dan `.ssh` directory `pastikan hak akses direktori .ssh milik user git`
 ```
 $ sudo adduser git
 $ su git
@@ -35,7 +35,7 @@ Initialized empty Git repository in /project.git/
 ```
 
 
-#### 4. Melalukan setting hooks untuk mengarahkan kode yang sudah dilakukan `(pull,commit,push)` agar masuk kedalam direktori lain `/home/git/repo/project/ adalah direktori repo original`
+#### 4. Melalukan setting hooks untuk mengarahkan kode yang sudah dilakukan `(pull,commit,push)` agar masuk kedalam direktori lain `/home/git/repo/project/ adalah direktori repo original, pastikan hak akses direktori repo milik user git`
 - contoh letak lokasi direktori `/home/git/repo/project/` ubah kepemilikan direktori sesuai user `git`
 ```
 chown -R git:git /home/git/repo/project/
