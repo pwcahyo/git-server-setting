@@ -26,7 +26,7 @@ $ cat /tmp/id_rsa.josie.pub >> ~/.ssh/authorized_keys
 $ cat /tmp/id_rsa.jessica.pub >> ~/.ssh/authorized_keys
 ```
 
-#### 3. Membuat direktori diserver digunakan sebagai akses git-server
+#### 3. Membuat direktori diserver digunakan sebagai akses git-server (hak akses folder `project.git` harus sesuai dengan user `git`)
 ```
 $ mkdir project.git
 $ cd project.git
